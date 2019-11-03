@@ -71,7 +71,7 @@ CREATE TABLE `cust_login` (
 
 INSERT INTO `cust_login` (`username`, `password`) VALUES
 ('farhan', 'farhan123'),
-('nigga', 'nigga123');
+('ansari', 'ansari123');
 
 -- --------------------------------------------------------
 
