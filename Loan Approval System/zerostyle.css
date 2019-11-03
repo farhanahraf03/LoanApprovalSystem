@@ -1,0 +1,82 @@
+body{
+	background-image: url("loginimg.jpg");
+	background-size:cover;
+	margin:10px;
+	font-family: 'Montserrat';
+}
+
+h4{
+	margin-top:15px;
+	margin-left: -50px;
+	font-size:130%;
+}
+.container{
+	width:60%;
+	height:90%;
+	margin-left: -150px;
+	color: white;
+	
+}
+
+.box1{
+	display: inherit;
+	margin-bottom: 20px;
+	background: rgba(0, 0, 0, 0.5);
+	height: 35%;
+	text-align: left;
+	margin-left:30px;
+	border:2px solid black;
+}
+
+#box1header{
+	padding: 3px;
+}
+
+li{
+	margin-bottom: 15px;
+}
+
+#lastli{
+	margin-top: 30px;
+}
+
+.box2{
+	display: inherit;
+	margin-bottom: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	height: 40%;
+	text-align: left;
+	margin-left:30px;
+	border:2px solid black;
+}
+
+h3{
+	
+	background-color: #ccc5cb;
+	margin-top: 0px;
+	color:black;
+}
+
+.bottom{
+	width: 57%;
+	margin-left: -95px;
+}
+
+#check{
+	display: inline-block;
+	float: right;
+	position: relative;
+	top: -65px;
+}
+
+#admin{
+	display: inline-block;
+	float:left;
+	position: relative;
+	top: -65px;
+}
+
+a{
+	color:black;
+	font-size: 18px;
+}

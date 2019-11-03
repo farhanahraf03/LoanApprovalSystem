@@ -1,0 +1,32 @@
+<?php
+
+session_start();
+
+$conn = mysql_connect("localhost","root","") or die(mysql_error());
+
+mysql_select_db("sdl") or die(mysql_error());
+
+$login = $_POST['username'];
+$pass = $_POST['password'];
+
+$_SESSION['l'] = $login;
+
+$q = "select * from cust_login where username='$login'";
+
+$result = mysql_query($q);
+
+$count=mysql_num_rows($result);
+
+if($count == 0)
+{
+	mysql_query("insert into cust_login values('$login','$pass')");
+
+	header("location:first.html");
+}
+
+else
+{
+	Print "<h3>User already exists.<h3>";
+}
+
+?>

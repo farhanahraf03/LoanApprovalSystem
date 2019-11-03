@@ -1,0 +1,87 @@
+body{
+	margin: 0px;
+	background-image: url(loginimg.jpg);
+	background-size: cover;
+	color:white;
+	font-family: 'Montserrat';
+	font-weight:600;
+	font-size: 18px;
+}
+
+a{
+	color:red;
+}
+
+.header{
+	text-align: center;
+	margin-top:50px;
+	font-size: 150%;
+	color: black;
+}
+
+h2{
+	margin-top: 60px;
+	color: red;
+	margin-left:100px;
+}
+
+.container{
+	width:90%;
+}
+
+#logout{
+	text-align: right;
+	margin-bottom: 20px;
+
+}
+
+.form-container{
+	width:25%;
+	margin-left:50px;
+}
+
+input[type='Number']
+{
+	padding:5px;
+	display: inline-block;
+	float: left;
+}
+
+.btn-primary{
+	display: inline-block;
+	float:right;
+}
+
+table{
+	margin-left: 50px;
+	margin-top:20px;
+	width:80%;
+	background-color: #0d1b28;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+
+th,td{
+	text-align: center;
+}
+
+#fail{
+	text-align: center;
+	margin-top:200px;
+	color:black;
+}
+
+::placeholder{
+	font-size: 20px;
+}
+
+#h9{
+	text-align: center;
+	color:red;
+}
+
+.lin{
+	color:red;
+}
+
+

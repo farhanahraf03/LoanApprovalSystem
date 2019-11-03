@@ -1,0 +1,239 @@
+<html>
+	<head><title>Result</title>
+	
+	  	  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		  <link rel="stylesheet" href="resstyle.css">
+	</head>
+	
+	<body>
+		
+		<?php
+	
+			session_start();
+			$conn = mysql_connect("localhost","root","") or die(mysql_error());
+			mysql_select_db("sdl") or die(mysql_error());
+
+			$x = $_SESSION['n'];
+			$y = $_SESSION['c'];
+			$z = $_SESSION['m'];
+
+			echo "$x <br> $y<br><br>";
+
+		
+			$q = "select score from customer where name ='$x' and contact = $y";
+			$details = "select salary,score,loanamt,loantype from customer where name = '$x' and contact = $y";
+		
+			$r = mysql_query($q);
+			$r2 = mysql_query($details);
+			
+			$sal = 0;
+			$sc = 0;	
+			$lamt = 0;
+			$type = "";		
+			while($row1 = mysql_fetch_assoc($r2))
+			{
+				$sal = $row1['salary'];
+				$sc = $row1['score'];
+				$lamt = $row1['loanamt'];
+				$type = $row1['loantype'];
+//					echo "-------$sal<br>-------$sc<br>----------$lamt";
+			}
+			
+//			$s = 0;
+			while($row = mysql_fetch_assoc($r))
+			{
+				
+				echo "<div class =header><h2>Welcome $x, your score is {$row['score']}</h2></div>";
+				
+				
+				if($z === 1)
+				{
+					if($row['score'] >= 450)
+					{
+						
+						echo '<br><h2>Congrats, you can now apply for loans';
+
+					}
+				
+					else
+					{
+					
+							echo '<br><h2>Sorry, you cannot apply for a loan as your score is below the cutoff score</h2>';
+					
+					}	
+				}
+				
+				else
+				{
+					echo '<br><h3>Sorry, you cannot apply for this loan.';
+					echo '<br>However,you can apply for:</h3>';
+					echo "<center><table border=1>
+						  <tr><th>Loan Amount</th>
+						  <th>Rate(p.a)</th>
+						  <th>Loan Type</th>
+						  <th>Duration</th></tr>";
+					
+					$ratio = $lamt/$sal;
+					
+					if($sal <= 50000 and $ratio >3)
+					{
+						echo "<tr><td>".($sal)."</td>
+							  <td>12.75%</td>
+							  <td>Personal Loan</td>
+							  <td>2 years</td></tr>";
+						
+						echo "<tr><td>".($sal*2)."</td>
+							  <td>11%</td>
+							  <td>Vehicle Loan</td>
+							  <td>3 years</td></tr>";
+						
+						echo "<tr><td>".($sal*3)."</td>
+							  <td>8.45%</td>
+							  <td>Home Loan</td>
+							  <td>5 years</td></tr>";
+						
+					}
+					
+					else if($sal > 50000 and $sal<=75000 and $ratio >4)
+					{
+						echo "<tr><td>".($sal)."</td>
+							  <td>12.75%</td>
+							  <td>Personal Loan</td>
+							  <td>2 years</td></tr>";
+						
+						echo "<tr><td>".($sal*2)."</td>
+							  <td>9%</td>
+							  <td>Education Loan</td>
+							  <td>3 years</td></tr>";
+						
+						echo "<tr><td>".($sal*3)."</td>
+							  <td>11%</td>
+							  <td>Vehicle</td>
+							  <td>4 years</td></tr>";
+						
+						echo "<tr><td>".($sal*4)."</td>
+							  <td>8.45%</td>
+							  <td>Home Loan</td>
+							  <td>5 years</td></tr>";
+						
+					}
+					
+					else if($sal > 75000 and $sal<=100000 and $ratio >5)
+					{
+						echo "<tr><td>".($sal)."</td>
+							  <td>12.75%</td>
+							  <td>Personal Loan</td>
+							  <td>2 years</td></tr>";
+						
+						echo "<tr><td>".($sal*2)."</td>
+							  <td>12.75%</td>
+							  <td>Personal Loan</td>
+							  <td>3 years</td></tr>";
+						
+						echo "<tr><td>".($sal*3)."</td>
+							  <td>9%</td>
+							  <td>Education Loan</td>
+							  <td>4 years</td></tr>";
+						
+						echo "<tr><td>".($sal*4)."</td>
+							  <td>11%</td>
+							  <td>Vehicle Loan</td>
+							  <td>5 years</td></tr>";
+						
+						echo "<tr><td>".($sal*5)."</td>
+							  <td>8.45%</td>
+							  <td>Home Loan</td>
+							  <td>6 years</td></tr>";
+						
+					}
+					
+					else if($sal > 100000 and $sal<=150000 and $ratio >6)
+					{
+						echo "<tr><td>".($sal)."</td>
+							  <td>12.75%</td>
+							  <td>Personal Loan</td>
+							  <td>3 years</td></tr>";
+						
+						echo "<tr><td>".($sal*2)."</td>
+							  <td>12.75%</td>
+							  <td>Personal Loan</td>
+							  <td>4 years</td></tr>";
+						
+						echo "<tr><td>".($sal*3)."</td>
+							  <td>9%</td>
+							  <td>Education Loan</td>
+							  <td>5 years</td></tr>";
+						
+						echo "<tr><td>".($sal*4)."</td>
+							  <td>11%</td>
+							  <td>Vehicle Loan</td>
+							  <td>6 years</td></tr>";
+						
+						echo "<tr><td>".($sal*5)."</td>
+							  <td>8.45%</td>
+							  <td>Home Loan</td>
+							  <td>6 years</td></tr>";
+						
+						echo "<tr><td>".($sal*6)."</td>
+							  <td>8.45%</td>
+							  <td>Home Loan</td>
+							  <td>7 years</td></tr>";
+						
+					}
+					
+					else
+					{
+						
+						echo ('<tr><td>' .$sal.'</td>
+							  <td>12.75%</td>
+							  <td>Personal Loan</td>
+							  <td>3 years</td></tr>');
+						
+						echo ('<tr><td>'.($sal*2).'</td>
+							  <td>12.75%</td>
+							  <td>Personal Loan</td>
+							  <td>4 years</td></tr>');
+						
+						echo ('<tr><td>'.($sal*3).'</td>
+							  <td>9%</td>
+							  <td>Education</td>
+							  <td>4 years</td></tr>');
+						
+						echo ('<tr><td>'.($sal*4).'</td>
+							  <td>9%</td>
+							  <td>Education Loan</td>
+							  <td>5 years</td></tr>');
+						
+						echo ('<tr><td>'.($sal*5).'</td>
+							  <td>11%</td>
+							  <td>Vehicle Loan</td>
+							  <td>6 years</td></tr>');
+						
+						echo ('<tr><td>'.($sal*6).'</td>
+							  <td>8.45%</td>
+							  <td>Home Loan</td>
+							  <td>6 years</td></tr>');
+						
+						echo ('<tr><td>'.($sal*7).'</td>
+							  <td>8.45%</td>
+							  <td>home Loan</td>
+							  <td>8 years</td></tr></table></center>');
+						
+					}
+					
+							
+					
+						
+				}
+				
+			}
+			
+			
+
+
+		?>
+		
+		<br><div class="oot"><a href="zero.html">logout</a></div>
+	</body>
+	
+</html>

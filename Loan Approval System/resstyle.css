@@ -1,0 +1,40 @@
+body{
+	margin: 0px;
+	background-image: url(loginimg.jpg);
+	background-size: cover;
+	color:black;
+	text-align: center;
+	font-family: 'Montserrat';
+}
+
+h2{
+	margin-top: 10px;
+}
+
+.header{
+	margin-top: 50px;
+	color: darkred;
+}
+
+table{
+	width: 40%;
+	background-color: white;
+}
+
+
+table,th,td{
+	
+	border: 1px solid black;
+	border-collapse:collapse;
+	text-align: center;
+	font-size: 110%;
+}
+
+th{
+	background-color: aqua;
+}
+
+.oot{
+	width:40%;
+	text-align: right;
+}

@@ -1,0 +1,45 @@
+<html>
+<head>
+	
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="custstyle.css">
+	
+</head>
+<body>
+
+	<span class = "home"><a href="zero.html">Home</a></span>
+	<span class="log"><a href="first.html">Login</a></span>
+	
+	<div class = "container">
+		<div class="login-box">
+		
+		<span class = "wrapper-text"><h4>Customer</h4></span>
+		<center><img src="logo.png" height=100px></center>
+		<span>
+			<form method="post" action="postcust.php">
+			<input type="text" class="form-email" name="username" required id = "user" placeholder="Username">
+			
+			<input type="password" class = "password" name="password" required id = "pwd"  placeholder="Password">
+			
+			<input type="submit" class="btn btn-primary">
+	
+
+			</form>
+		</span>
+		</div>
+		<center><button type = "button" id="butan" onclick = "newpage.html"><h5>Sign Up</h5></button></center>
+	</div>
+	
+	
+	
+<script type = "text/javascript">
+	document.getElementById("butan").onclick = function () {
+		location.href = "newpage.html"
+	}
+</script>
+
+</body>
+</html>	

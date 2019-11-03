@@ -1,0 +1,105 @@
+<html>
+
+<head>
+	<title>CIBIL calculator</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="astyle.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+
+
+		<div id="header">CIBIL Score Calculator</div>
+
+<!--		<div class="ling"><a href="res.php"><h5 class="res">Check Your Score.</h5></a></div>-->
+
+		<form action="aphp.php" method="post" id="registerform">
+
+			<span class="personal" style="overflow-y: scroll">
+
+
+				<div class="form1">
+
+					<div class="op" >Name:<input type="text" name="name" required></div>
+
+					<div class="op" >Contact:<input type="text" name="contact" required pattern="[0-9]{10}" title="10 digits"></div>
+
+					<div class="op" >Age:<input type="Number" id="age" name="age" required min="18" max="100" title="You should be atleast 18 years old." ></div>
+
+					<div class="op" id="email" >Email:<input type="email" name="email" required></div>
+
+					<div class="op" >Country:<input type="text" name="country" required></div>
+
+
+					<div class="op" id="gender">Gender
+						<br>Male:<input type="Radio" name="gender"><br>
+						Female:<input type="Radio" name="gender"><br>
+						Other:<input type="Radio" name="gender" checked>
+					</div>
+
+
+				</div>
+
+			</span>
+
+
+			<span class="financial" style="overflow-y: scroll">
+
+				<div class="form2">
+
+					<div class="op">Profession:<input type="text" name="profession" required></div>
+
+					<div class="op">Monthly Salary:<input type="Number" id="salary" name="salary" required></div>
+					
+					<div class="op">PAN Card Number:<input type="text" id="incomecert" name="pan" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" title="FORMAT = ABCDE1234A"></div>
+					
+					<div class="op">Bank A/C number:<input type="text" id="ac" name="ac" required pattern="[0-9]{16}" title="16 digits"></div>
+
+					<div class="op">Previous Loans Taken:<input type="Number" id="loans" name="loans" required></div>
+
+<!--					<div class="op">No. of days overdue:<input type="Number" id="overdues" name="overdues" required></div>-->
+
+					<div class="op">Credit Limit:<input type="Number" id="credit" name="credit" required></div>
+					
+					<div class="op">Loan Amount:<input type="Number" id="credit" name="loanamt" required></div><br>
+					
+					<div class="op">Loan type:  <select class="custom-select mr-sm-2" name="loantype" id="credit">
+				  	                 
+<!--                                     <option selected>Choose</option> -->
+				  	                 <option value="Home Loan">Home Loan @8.45%</option>
+				  	                 <option value="Education Loan">Education Loan @9%</option>
+				  	                 <option value="Vehicle Loan">Vehicle Loan @11%</option>
+				  	                 <option value="Personal Loan">Personal Loan @12.75%</option>
+				
+				                	</select>
+					           
+					</div>
+					
+					<br><div class="op">Duration:<input type="Number" id = "credit" name ="duration" min="1" max="10" title="MIN = 1yr  MAX = 10yrs"></div>
+
+
+				</div>
+
+			</span>
+
+
+			<input type="submit" class="btn btn-primary" id="buton">
+		</form>
+
+	</div>
+
+</body>
+
+
+
+</html>
+
+

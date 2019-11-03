@@ -1,0 +1,122 @@
+body{
+	margin:0;
+	background-image: url(loginimg.jpg);
+	background-size: cover;
+	color:white;
+	
+	font-family: 'Montserrat';
+	font-size: 18px;
+}
+
+.container{
+	height:90%;
+}
+
+#header{
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.ling{
+	text-align: right;
+}
+
+
+.admin{
+	margin-bottom:20px;
+}
+
+a{
+	color:black;
+}
+
+.personal{
+	background-color: #0d1b28;
+	background: rgba(0, 0, 0, 0.5);
+	display:inline-block;
+	float: left;
+	width:48%;
+	margin-left: 10px;
+	height: 80%;
+	margin-bottom: 20px;
+}
+
+.financial{
+	background-color: black;
+	background: rgba(0, 0, 0, 0.5);
+	display:inline-block;
+	float:right;
+	width:48%;
+	margin-right: 10px;
+	height:80%;
+	margin-bottom: 20px;
+}
+
+.op{
+	margin-left: 20px;
+	
+}
+
+form{
+	height: 90%;
+}
+
+.form1{
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+#gender{
+	margin-bottom: 10px;
+}
+
+.form2{
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+input[type = "text"],input[type = "date"],input[type = "email"],input[type="Number"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	padding-bottom: 0px;
+	margin-bottom: 25px;
+	margin-left: 20px;
+}
+
+.custom-select
+{
+  	width: 56%;
+  	border: none;
+  	color: black;
+	background: rgba(0,0,0,0.5);
+	outline: none;
+/*	height: 40px;*/
+	color: #fff;
+  
+}
+
+#buton{
+	margin-top: 20px;
+	position: relative;
+	left: 450px;
+	
+}
+
+.btn-primary{
+	width:20%;
+}
+
+.btn-primary:hover{
+	background-color: #bc1d97;
+	border-color: #bc1d97;
+}
+
+
+

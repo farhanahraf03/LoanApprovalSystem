@@ -1,0 +1,87 @@
+body{
+	background-image: url(loginimg.jpg);
+	background-size: cover;
+	margin: 0 auto;
+	font-family: 'Montserrat';
+}
+
+.login-box{
+	width: 350px;
+	height: 450px;
+	background-color: red;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding-top:60px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 70px;
+}
+
+.login-box p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+h4{
+	text-align: center;
+}
+
+img{
+	margin-top:20px;
+	margin-bottom: 30px;
+}
+.login-box input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+
+input:hover{
+	cursor: default;
+}
+
+input[type="text"], input[type="Password"]
+	{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	padding-bottom: 5px;
+	}
+
+.login-box input[type="Submit" ]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #1c8adb;
+ 	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+	
+.login-box input[type="Submit" ]:hover
+{
+	cursor: pointer;
+	background: #bc1d97;
+	
+}
+
+::placeholder{
+	color: white;
+}
+
+
+#user,#pwd{
+	position: relative;
+	top: -15px;
+}

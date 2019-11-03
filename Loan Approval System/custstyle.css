@@ -1,0 +1,137 @@
+body{
+	background-image: url(loginimg.jpg);
+	background-size: cover;
+	margin: 0 auto;
+	font-family: 'Montserrat';
+}
+
+
+.box{
+	width:100%;
+	height:50%;
+	background-color: red;
+}
+
+.login-box{
+	width: 350px;
+	height: 450px;
+	background-color: red;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding-top:60px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 70px;
+}
+
+.login-box p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+h4{
+	text-align: center;
+	margin-top: -25px
+}
+
+img{
+	margin-top:15px;
+	margin-bottom: 15px;
+}
+.login-box input{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+
+input:hover{
+	cursor: default;
+}
+
+input[type="text"], input[type="Password"]
+	{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	padding-bottom: 5px;
+	}
+
+.login-box input[type="Submit" ]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #1c8adb;
+ 	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+	font-size:130%;
+}
+
+	
+.login-box input[type="Submit" ]:hover
+{
+	cursor: pointer;
+	background: #bc1d97;
+	
+}
+
+::placeholder{
+	color: white;
+}
+
+#butan{
+	position: relative;
+	top:380px;
+	margin: 0;
+	border: 0px;
+	height: 20px;
+	background: #1c8adb;
+ 	color: #fff;
+	border-radius: 20px;
+	width:26%;
+	padding: 20px 0px;
+}
+
+#butan:hover{
+	cursor: pointer;
+	background: #bc1d97;
+}
+
+h5{
+	position: relative;
+	top: -12px;
+}
+
+.home{
+	display: inline-block;
+	float: left;
+	margin-top: 70px;
+	margin-left: 510px;
+}
+
+.log{
+	display: inline-block;
+	float: right;
+	margin-top: 70px;
+	margin-right: 510px;
+}
+
+a{
+	color: white;
+	font-size: 120%;
+	text-decoration: underline;
+}
+
+a:hover{
+	color: red;
+}
